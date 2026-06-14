@@ -59,14 +59,18 @@ def _load(name: str):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-@app.get("/")
-def root():
+@app.get("/api")
+def api_root():
+    # API index. "/" is left for the served frontend (StaticFiles mount below).
     return {
         "service": "AI-Driven Crime Analytics API",
-        "phase": "1",
+        "version": "0.5.0",
         "endpoints": [
             "/health", "/api/meta", "/api/districts", "/api/districts/{geo_unit_id}",
             "/api/hotspots", "/api/trends", "/api/kpi-catalog", "/api/categories",
+            "/api/whoami", "/api/intelligence/repeat-offenders", "/api/intelligence/network",
+            "/api/intelligence/patterns", "/api/socioeconomic", "/api/socioeconomic/correlations",
+            "/api/socioeconomic/schema",
         ],
         "docs": "/docs",
     }
