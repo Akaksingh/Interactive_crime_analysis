@@ -23,6 +23,9 @@ backend/data/raw/*
 backend/data/processed/*
 !backend/data/processed/.gitkeep
 
+# ---- runtime ----
+backend/logs/
+
 # ---- misc ----
 .DS_Store
 *.local

@@ -52,7 +52,7 @@ npm run dev                            # http://localhost:5173
 - ✅ **Phase 2 — Dashboard & Geospatial MVP** — Leaflet map (risk choropleth + hotspots + heatmap)
 - ✅ **Phase 3 — Core Intelligence** — repeat-offender + co-offending network (synthetic) + ML pattern/anomaly detection (real data)
 - 🟡 **Phase 4 — Correlation layer** — socio-economic ↔ crime correlation **delivered** (real Census 2011); calibrated prediction + alerting pending
-- ⏳ Phase 5 — hardening & rollout ([roadmap](roadmap.md))
+- 🟡 **Phase 5 — Hardening** — single-origin serving, RBAC, audit logs, security headers, Docker **delivered**; pilot validation pending ([docs/phase-5](docs/phase-5/README.md))
 
 Runs on **real, verified data for all 30 Karnataka districts**: NCRB district-wise
 IPC crimes (2001–2012, reconciled exactly to NCRB totals), Census 2011 populations,

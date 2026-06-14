@@ -113,10 +113,15 @@ Current systems rely on siloed data and manual reporting, limiting advanced anal
   hypothesis verdicts) and the [frontend](frontend/src/Correlations.jsx) shows the
   matrix with ethical caveats (ecological fallacy, non-causality, protected attributes).
 
-### Phase 5: Hardening and Rollout (Week 16-18)
-- Security, RBAC, audit logs, and observability hardening.
-- Validation with pilot users; refine model thresholds.
-- Production rollout and governance checklist signoff.
+### Phase 5: Hardening and Rollout (Week 16-18) — IN PROGRESS
+- Security, RBAC, audit logs, and observability hardening. **DELIVERED.**
+- Validation with pilot users; refine model thresholds. *(pending real pilot)*
+- Production rollout and governance checklist signoff. *(containerized; signoff pending)*
+- **Built in [docs/phase-5/](docs/phase-5/README.md):** FastAPI serves the built
+  frontend at one origin (no proxy); API-key RBAC (`viewer<analyst<admin`) gates the
+  person-level intelligence endpoints; per-request audit logging + security headers +
+  configurable CORS; multi-stage [Dockerfile](Dockerfile) + [compose](docker-compose.yml).
+  Auth is dev-open until `CRIME_API_KEYS` is set, so the demo runs with no setup.
 
 ## 7. Detailed Capability Tracks
 ### A. Network and Link Analysis
